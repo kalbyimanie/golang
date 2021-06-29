@@ -12,6 +12,6 @@ COPY ./src/ /go/src/app/src
 COPY ./pkg/ /go/src/app/pkg
 COPY ./bin/ /go/src/app/bin
 RUN go get -v -u github.com/gorilla/mux
-RUN go build -o ./bin/main src/main/main.go
+RUN go build -o ./bin/main ./src/main/main.go
 
 CMD ["./bin/main"]
